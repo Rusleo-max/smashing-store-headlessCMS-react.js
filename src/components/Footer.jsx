@@ -12,7 +12,7 @@ const Footer = () => {
                     </div>
                     <div className="col-md-6 mb-md-0 mb-3 d-flex" style={{flexDirection: "column"}}>
                         <h5 className="text-uppercase font-weight-bold text-center">Smashing Stores</h5>
-                        <span className="text-center" role="img" aria-label>Built with 💕 by <a href="https://github.com/Rusleo-max">Yicheng Jiang</a></span>
+                        <span className="text-center" role="img" aria-label="">Built with 💕 by <a href="https://github.com/Rusleo-max">Yicheng Jiang</a></span>
                     </div>
                 </div>
             </div>

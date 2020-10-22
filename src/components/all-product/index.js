@@ -7,7 +7,7 @@ const PRODUCT_QUERY = gql`
             name
             price
             description
-            createAt
+            createdAt
             image {
                 id
                 url
