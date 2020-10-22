@@ -7,7 +7,7 @@ import ApolloClient from "apollo-boost";
 import * as serviceWorker from './serviceWorker';
 
 const client = new ApolloClient({
-    uri: "https://api-eu-central-1.graphcms.com/v2/ckgj0axeyd42u01zbc5ku4z8w/master"
+    uri: "https://api-eu-central-1.graphcms.com/v2/ckgj0axeyd42u01zbc5ku4z8w/master" // endpoint url of your graphQL Content
 });
 
 ReactDOM.render(
