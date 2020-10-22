@@ -9,7 +9,8 @@ class Allproducts extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            cartItems: []
+            cartItems: [],
+            show: false
         };
     }
 
@@ -17,6 +18,14 @@ class Allproducts extends Component {
         this.setState({
             cartItems: this.state.cartItems.concat([item])
         })
+    }
+
+    showModal = () => {
+        this.setState({show: true});
+    }
+
+    hideModal = () => {
+        this.setState({show: false});
     }
 
     render() {
@@ -28,9 +37,13 @@ class Allproducts extends Component {
                     if (error) return <div>Error fetching products</div>
 
                     const items = data.productses;
+                    const itemsSent = this.state.cartItems;
+
                     return (
                         <div>
-                            <Navbar/>
+                            <Navbar cart={itemsSent} show={this.showModal}/>
+                            <Cart show={this.state.show} items={itemsSent} handleClose={this.hideModal}>
+                            </Cart>
                             <div className="container mt-4">
                                 <div className="row">
                                     {items.map(item => <Product key={item.id} product={item} addItem={this.addItem}/>)}
